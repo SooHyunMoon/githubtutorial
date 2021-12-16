@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        // MyToDoList
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="MyToDoList"
+            android:textSize="10dp"
+            android:textStyle="italic"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_margin="2dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="WEEKLY"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:onClick="weeklyAction"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        // 이전, 다음 버튼 / XXXX년 XX월
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/previous"
+            android:text="이전"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:onClick="previousMonthAction"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:id="@+id/monthYear"
+            android:gravity="center"
+            android:text="Jan 2022"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/next"
+            android:text="다음"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            android:layout_margin="8dp"
+            android:onClick="nextMonthAction"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/black">
+
+        // 일월화수목금토
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SUN"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="MON"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="TUE"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="WED"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="THU"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="FRI"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="SAT"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_margin="2dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/calendarRecyclerView"/>
+</LinearLayout>
